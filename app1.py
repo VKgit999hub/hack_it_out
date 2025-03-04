@@ -75,10 +75,10 @@ app.add_middleware(
 
 
 model_gru = GRU_MODEL().to(device)
-model_gru.load_state_dict(torch.load(r"C:\Users\Vivek Kumar\OneDrive\Documents\hack_it_out\model_weights_gru2.pth", map_location=device))
+model_gru.load_state_dict(torch.load("model_weights_gru2.pth", map_location=device))
 model_gru.eval()  
 
-with open(r"C:\Users\Vivek Kumar\OneDrive\Documents\hack_it_out\best_xgb_models_1.pkl", "rb") as f:
+with open("best_xgb_models_1.pkl", "rb") as f:
     loaded_xgb_models = pickle.load(f)
 
 
