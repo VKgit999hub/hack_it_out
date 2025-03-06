@@ -64,6 +64,7 @@ class GRU_MODEL(nn.Module):
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+@app.get("/", methods=["GET", "HEAD"])  
 
 @app.get("/")
 def home():
