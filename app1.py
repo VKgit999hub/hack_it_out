@@ -64,10 +64,9 @@ class GRU_MODEL(nn.Module):
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-@app.get("/", methods=["GET", "HEAD"])  
 
 @app.get("/")
-def home():
+def index():
     return {"message": "API is running!"}
 
 app.add_middleware(
