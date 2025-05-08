@@ -3,6 +3,7 @@ import requests
 import torch
 import json
 import pickle
+import uvicorn
 from datetime import datetime, timedelta 
 import torch.nn as nn
 from fastapi import FastAPI
@@ -147,3 +148,5 @@ def predict(input_data: InputData):
         return {"error": str(e)}
 
 # Run the API using: uvicorn filename:app --reload
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8080)
